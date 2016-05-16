@@ -1,0 +1,42 @@
+<html>
+<head>
+  <script type="text/javascript" src="../dist/watcher.js"></script>
+</head>
+<body>
+
+  <span id="test"></span>
+
+  <script>
+
+    let node = document.querySelector("#test");
+
+    let watch = new Watcher(node, {}, (e) => {});
+
+    watch.start();
+
+    let div = document.createElement("div");
+    div.innerHTML = Math.random();
+    node.appendChild(div);
+
+    let div2 = document.createElement("div");
+    div2.innerHTML = Math.random();
+    node.appendChild(div2);
+
+    node.removeChild(div2);
+
+    let div3 = document.createElement("div");
+    div3.innerHTML = Math.random();
+    node.appendChild(div3);
+
+    let div4 = document.createElement("div");
+    div4.innerHTML = Math.random();
+    node.appendChild(div4);
+    div4.style.background = "";
+    div4.style.background = "red";
+    div4.style.background = "blue";
+    div4.className = "test";
+
+  </script>
+
+</body>
+</html>
