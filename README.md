@@ -1,5 +1,5 @@
 # Watcher
-Watcher is a standalone 2KB micro-library, written in ES6. Watcher tracks any changes on your website, or any specific element on it.
+Watcher is a standalone 3KB micro-library, written in ES6. Watcher tracks all happening changes on your website, or any specific element on it.
 
 ## Features
  - Track any changes, happening inside your DOM.
